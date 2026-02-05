@@ -18,22 +18,22 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // home route
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "home.html"));
+  res.sendFile(path.join(__dirname, "Views", "home.html"));
 });
 
 // about route
 app.get("/about", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "about.html"));
+  res.sendFile(path.join(__dirname, "Views", "about.html"));
 });
 
 // project route
 app.get("/project", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "project.html"));
+  res.sendFile(path.join(__dirname, "Views", "project.html"));
 });
 
 // 404 error handler for undefined routes
 app.use((req, res) => {
-  res.status(404).sendFile(path.join(__dirname, "views", "404.html"));
+  res.status(404).sendFile(path.join(__dirname, "Views", "404.html"));
 });
 
 // setup server
